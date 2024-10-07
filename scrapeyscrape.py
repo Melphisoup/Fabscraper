@@ -29,7 +29,14 @@ for d in des:
 #Randomize the links
 random.shuffle(link_list)
 #Print out the first link in the randomized list
+link_file = open("links.txt", 'a')
+
+link_file.write(link_list)
+
+
+
 print(link_list[0])
+
     
     
 
