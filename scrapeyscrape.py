@@ -26,16 +26,19 @@ for d in des:
     deck_links = d.get_attribute('href')
     link_list = []
     link_list.append(deck_links)
-#Randomize the links
-random.shuffle(link_list)
-#Print out the first link in the randomized list
+#Open file
 link_file = open("links.txt", 'a')
 
-link_file.write(link_list)
+with link_file as lf:
+    for items in link_list:
+        lf.write('%s\n' %link_list)
+    print("Sucess!")
+
+lf.close()
 
 
 
-print(link_list[0])
+
 
     
     
