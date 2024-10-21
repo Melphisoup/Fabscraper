@@ -7,10 +7,10 @@ import time
 
 
 
-service = Service()
+
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
-driver = webdriver.Chrome(service=service, options=options)
+driver = webdriver.Chrome(options=options)
 
 URL = "https://fabrary.net/decks?tab=latest"
 driver.get(URL)
